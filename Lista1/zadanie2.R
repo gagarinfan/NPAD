@@ -10,7 +10,8 @@ macierz
 
 #znalezienie pozycji najtańszego kraju
 najtanszyKraj = min(tail(macierz, n=1))
-k <- arrayInd(najtanszyKraj, dim(macierz))
+k = which(macierz == najtanszyKraj, TRUE)
+
 #zlokalizowanie kolumy i wylistowanie jej
 najlepszaOferta = macierz[,colnames(macierz)[k[,2]], drop=FALSE]
 najlepszaOferta
